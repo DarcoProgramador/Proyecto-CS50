@@ -18,7 +18,7 @@ LABELS = ["Con_mascarilla", "Sin_mascarilla"]
 
 #Leer el modelo
 face_mask = cv2.face.LBPHFaceRecognizer_create()
-face_mask.read("Face_mask_model.xml")
+face_mask.read("../train_data/Face_mask_model.xml")
 
 def iniciar():
     global cap
