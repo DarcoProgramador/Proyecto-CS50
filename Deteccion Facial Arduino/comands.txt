@@ -1,0 +1,13 @@
+pip install numpy
+pip install opencv-contrib-python
+pip install mediapipe
+pip install pyserial
+
+referencias:
+Programa:
+https://omes-va.com/deteccion-mascarilla-opencv-python/
+https://omes-va.com/tkinter-opencv-video/
+
+dataset:
+https://github.com/jjrodcast/MaskDectector
+
