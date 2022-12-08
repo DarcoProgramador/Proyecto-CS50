@@ -18,7 +18,7 @@ LABELS = ["Con_mascarilla", "Sin_mascarilla"]
 
 #Leer el modelo
 face_mask = cv2.face.LBPHFaceRecognizer_create()
-face_mask.read("../train_data/Face_mask_model.xml")
+face_mask.read("./train_data/Face_mask_model.xml")
 
 def iniciar():
     global cap
@@ -92,14 +92,40 @@ def visualizar():
 
 def finalizar():
     global cap
+    #ser.close()
     cap.release()
 
 cap = None
+
+#ventana principal
 root = Tk()
-btnIniciar = Button(root, text="Iniciar", width=45, command=iniciar)
-btnIniciar.grid(column=0, row=0, padx=5, pady=5)
-btnFinalizar = Button(root, text="Finalizar", width=45, command=finalizar)
-btnFinalizar.grid(column=1, row=0, padx=5, pady=5)
-lblVideo = Label(root)
-lblVideo.grid(column=0, row=1, columnspan=2)
+root.title("Reconocimiento Facial de mascarillas")
+root.geometry("1280x720")
+root.resizable(False, False)
+
+#fondo
+imagenF = PhotoImage(file="./images/Fondo.png")
+background = Label(image=imagenF, text="Fondo")
+background.place(x = 0 , y = 0, relwidth = 1, relheight = 1)
+
+#texto inicial
+texto1 = Label(text="Reconocimiento de Mascarilla")
+texto1.place(x= 580, y=10)
+
+#boton iniciar
+imgIniciar = PhotoImage(file="./images/button(1).png")
+btnIniciarAct = Button(root, text="Iniciar",  image= imgIniciar , width=177, height=62, command=iniciar)
+btnIniciarAct.place(x=450, y=600)
+
+#boton finalizar
+imgFinalizar = PhotoImage(file="./images/button(2).png")
+
+btnFinalizarAct = Button(root, text="Finalizar",image= imgFinalizar , width=177, height=62, command=finalizar)
+btnFinalizarAct.place(x=650, y=600)
+
+lblFondo = Label(root, bg="black", height=31, width=90)
+lblFondo.place(x=330,y=40)
+lblVideo = Label(root, bg="black")
+lblVideo.place(x=330,y=40)
+
 root.mainloop()
