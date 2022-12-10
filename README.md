@@ -40,30 +40,30 @@ en canso de ocupar algun otro arduino o no utilizar los mismos pines para el enc
 Para ejecutar los programas en python primeramente clonaremos el repositorio de git utilizando
 
 ```
-$ git clone https://github.com/DarcoProgramador/Proyecto-CS50.git
+git clone https://github.com/DarcoProgramador/Proyecto-CS50.git
 ```
 
 posteriormente nos ubicaremos en la carpeta
 
 ```
-$ cd ./Deteccion Facial Arduino
+cd ./Proyecto-CS50/Deteccion Facial Arduino
 ```
 
 y procederemos a crear un entorno virtual para python, primero intalamos el paquete virtualenv
 
 ```
-$ pip install virtualenv
+pip install virtualenv
 ```
 
 y crearemos nuestro entorno virtual
 
 ```
-$ virtualenv env
-$source /venv/Scripts/activate
+virtualenv env
+source /venv/Scripts/activate
 ```
 o
 ```
-$ source /venv/bin/activate
+source /venv/bin/activate
 ```
 para linux
 
