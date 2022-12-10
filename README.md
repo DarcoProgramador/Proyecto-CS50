@@ -59,13 +59,15 @@ y crearemos nuestro entorno virtual
 
 ```
 virtualenv env
-source /venv/Scripts/activate
+```
+```
+.\env\Scripts\activate.bat
 ```
 o
 ```
 source /venv/bin/activate
 ```
-para linux
+si es que usas linux
 
 por ultimo ejecutaremos
 ```
