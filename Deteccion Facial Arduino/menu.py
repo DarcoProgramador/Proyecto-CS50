@@ -12,9 +12,6 @@ from math import acos, degrees
 port = 'COM3'#Configuracion de el puerto serial
 speed = int(9600)
 
-
-time.sleep(2)
-
 mp_face_detection = mp.solutions.face_detection
 LABELS = ["Con_mascarilla", "Sin_mascarilla"]
 
@@ -26,6 +23,7 @@ def iniciar():
     global cap, ser
     cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
     ser = serial.Serial(port, speed, timeout=1)
+    time.sleep(1)
     visualizar()
 
 def detect_mask(frame):
@@ -83,7 +81,6 @@ def detect_mask(frame):
 
                             result = face_mask.predict(face_image)
                             #cv2.putText(frame, "{}".format(result), (xmin, ymin -5), 1, 1.3, (210,124, 176), 1, cv2.LINE_AA)
-                            print(result)
 
                             if result[1] < 150:
                                 color = (0, 255, 0) if LABELS[result[0]] == "Con_mascarilla" else (0,0,255)
