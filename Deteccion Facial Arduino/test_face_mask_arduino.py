@@ -39,10 +39,12 @@ with mp_face_detection.FaceDetection(
                 if xmin < 0 and ymin < 0:
                     continue
                 #cv2.rectangle(frame, (xmin, ymin), (xmin + w, ymin + h), (0, 255, 0), 5)
-
-                face_image = frame[ymin : ymin + h, xmin : xmin + w]
-                face_image = cv2.cvtColor(face_image, cv2.COLOR_BGR2GRAY)
-                face_image = cv2.resize(face_image, (72, 72), interpolation=cv2.INTER_CUBIC)
+                try:
+                    face_image = frame[ymin : ymin + h, xmin : xmin + w]
+                    face_image = cv2.cvtColor(face_image, cv2.COLOR_BGR2GRAY)
+                    face_image = cv2.resize(face_image, (72, 72), interpolation=cv2.INTER_CUBIC)
+                except:
+                    continue
 
                 result = face_mask.predict(face_image)
                 #cv2.putText(frame, "{}".format(result), (xmin, ymin -5), 1, 1.3, (210,124, 176), 1, cv2.LINE_AA)

@@ -26,7 +26,7 @@ para ensamblar el seguiremos el siguiente esquema:
 luego cargaremos el programa de ino desarrollado en arduino IDE
 
 para esto descargaremos el arduino IDE desde la tienda de microsoft
-* [Arduino IDE](https://apps.microsoft.com/store/detail/9NBLGGH4RSD8?hl=en-us&gl=US): Arduino IDE
+* [Arduino IDE](https://apps.microsoft.com/store/detail/9NBLGGH4RSD8?hl=en-us&gl=US)
 
 una vez descargado conectaremos el arduino a nuestra PC y cargaremos el .ino que se encuentra en /Deteccion Facial Arduino/Arduino/Arduino_leds
 
@@ -74,3 +74,4 @@ por ultimo ejecutaremos
 pip install -r requirements.txt
 ```
 para instalar todos los paquetes necesarios
+
