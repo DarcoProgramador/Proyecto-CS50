@@ -2,6 +2,7 @@ pip install numpy
 pip install opencv-contrib-python
 pip install mediapipe
 pip install pyserial
+pip install imutils
 
 referencias:
 Programa:
@@ -9,8 +10,3 @@ https://omes-va.com/deteccion-mascarilla-opencv-python/
 https://omes-va.com/tkinter-opencv-video/
 https://omes-va.com/alineamiento-de-rostros-opencv-mediapipe/
 https://youtu.be/lBGViBaEuS0
-
-
-dataset:
-https://github.com/jjrodcast/MaskDectector
-
